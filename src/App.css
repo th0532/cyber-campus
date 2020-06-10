@@ -1,0 +1,14 @@
+html{
+  box-sizing: content-box;
+}
+body{
+  padding-top:68px;
+}
+ul,p{
+  margin:0px;
+  padding:0px;
+}
+p, span{
+  margin-top:0px;
+  font-size: 16px;
+}
