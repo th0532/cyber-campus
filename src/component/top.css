@@ -6,7 +6,7 @@ li{
 }
 a{
     text-decoration: none;
-    color:white;
+    color:black;
 }
 .white{
     color:white;
@@ -42,4 +42,7 @@ a{
 .logout{
     background-color: #2754a7;
     margin-right:10px;
+}
+.logout a{
+    color: white;
 }

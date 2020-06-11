@@ -8,9 +8,9 @@
     height:1000px;
     width:190px;
     background-color:rgb(47,48,51);
+    float:left;
 }
 .wrap li span{
-    color:#dddddd;
     margin-left:15px;
     height: 100%;
     display: inline-block;
@@ -19,6 +19,8 @@
 .wrap > li{
     padding-left:30px;
     padding-top:15px;
+    color:#dddddd;
+    font-size: 14px;
 }
 .wrap_item li{
     padding-left:50px;
