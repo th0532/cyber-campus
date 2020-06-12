@@ -13,9 +13,9 @@ class Top extends React.Component{
                         <li className="white">이태희</li>
                         <li><img src={"http://recruit.dothome.co.kr/img/profile.png"} width="35px" height="35px"/></li>
                         <li><img src={"http://recruit.dothome.co.kr/img/nav_menu.png"}/></li>
-                        <li><img src={"http://recruit.dothome.co.kr/img/nav_menu.png"}/></li>
-                        <li><img src={"http://recruit.dothome.co.kr/img/nav_menu.png"}/></li>
-                        <li><img src={"http://recruit.dothome.co.kr/img/nav_menu.png"}/></li>
+                        <li><img src={"http://recruit.dothome.co.kr/img/nav_menu2.png"}/></li>
+                        <li><img src={"http://recruit.dothome.co.kr/img/nav_menu3.png"}/></li>
+                        <li><img src={"http://recruit.dothome.co.kr/img/nav_menu4.png"}/></li>
                         <li className="logout"><a href="#">로그아웃</a></li>
                     </ul>
                 </div>

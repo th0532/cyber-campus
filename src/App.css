@@ -1,6 +1,3 @@
-html{
-  box-sizing: border-box;
-}
 body{
   padding-top:68px;
   
@@ -15,4 +12,7 @@ p, span{
 }
 .container {
   width:100%;
+  background-color: rgb(247,249,250);
+  overflow: hidden;
+  position: relative;
 }

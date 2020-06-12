@@ -5,7 +5,7 @@ class Sidebar extends React.Component{
         isActive:true
     }
     listClick = () =>{
-        alert("구현중입니다.")
+        alert("준비중입니다.")
     }
     render(){
         const menu = [

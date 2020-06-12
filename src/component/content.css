@@ -1,10 +1,12 @@
+h5{
+    margin-bottom: 0px;
+}
 .title_color{
     color:#0370a6;
 }
 .content{
     float: left;
     width:100%;
-    background-color: rgb(247,249,250);
     padding-bottom: 40px;
 }
 .content_fakemargin{
@@ -42,6 +44,7 @@
 .rightMenu{
     float:right;
     width:300px;
+    box-sizing: border-box;
 }
 
 /* mainList */
@@ -134,4 +137,54 @@
 }
 .infomation_list li span{
     float: right;
+}
+
+/* rightMenu */
+.rightMenu{
+    padding:22px 18px;
+    background-color: white;
+    border: 1px solid #e3e3e3;
+}
+.important_info_title, .intended_info_title, .allIntended_title{
+}
+.important_info_title h4, .intended_info_title h4, .allIntended_info_title h4{
+    margin:0px;
+    color:#0370a6;
+}
+.important_info_title button, .intended_info_title button, .allIntended_info_title button{
+    float:right;
+    background: none;
+    border: none;
+}
+.important_info_item_title >h5 , .intended_info_item_title >h5{
+    font-weight: 400;
+}
+.important_info_item > ul >li >img , .intended_info_item > ul >li >img{
+    float:left;
+    margin-right:15px;
+}
+.allIntended_info_item p{
+    margin: 30px;
+    font-size: 14px;
+}
+.allIntended_info_item button{
+    background-color: white;
+    border: 1px solid #e3e3e3;
+    margin: 5px 0px;
+}
+.intended{
+    border-top:1px solid #e3e3e3;
+    margin:25px 0px;
+}
+.intended_info_title h4{
+    margin-top:15px;
+}
+.etc{
+    background-color: rgb(247,249,250);
+    border: 1px solid #e3e3e3;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 25px;
+    padding: 5px 0px;
 }

@@ -1,0 +1,21 @@
+.footer{
+    background-color: #333;
+    min-height: 88px;
+    float: left;
+    width:100%;
+}
+.policy, .tell_info > span{
+    font-size:13px;
+}
+.policy{
+    float:left;
+    margin-left:20px;
+}
+
+.tell_info{
+    float:right;
+}
+.policy a, .tell_info span{
+    color:#999;
+    line-height: 88px;
+}

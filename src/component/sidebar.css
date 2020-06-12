@@ -6,8 +6,12 @@
 }
 .sidebar{
     width:190px;
+    height: 100%;
     background-color:rgb(47,48,51);
     float:left;
+    position: absolute;
+    top:0px;
+    bottom:0px;
 }
 .wrap li span{
     margin-left:15px;
