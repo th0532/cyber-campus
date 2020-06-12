@@ -41,6 +41,9 @@ h5{
     color:rgb(189,190,191);
     text-align: center;
 }
+.setting img{
+    padding-top: 5px;
+}
 .rightMenu{
     float:right;
     width:300px;
