@@ -6,7 +6,7 @@ import "./content.css";
                 <div className="content_fakemargin">
                     <div className="content">
                         <div className="rightMenu">
-                            <RightMenu importantInfo={this.props.importantInfo} intended={this.props.intended} />
+                            <RightMenu right={this.props.right} />
                         </div>
                         <div className="main_fakemargin">
                             <div className="main_wrap">
@@ -18,7 +18,8 @@ import "./content.css";
                                     </div>
                                         <MainList MainList = {this.props.MainList}/>
                                 </div>
-                                <Information Information={this.props.Info}/>
+                                    <Information Infomation={this.props.Infomation}/> :
+                                
                             </div>
                         </div>
                     </div>
@@ -29,6 +30,8 @@ import "./content.css";
     }
     class MainList extends React.Component{
         render(props){
+            console.log(this.props.MainList)
+
             return(
                 <div className="mainList">
                     <ul>
@@ -52,44 +55,82 @@ import "./content.css";
     }
 
     class Information extends React.Component{
+        state = {
+            Infomation_gubun:true,
+            infoColor:"active",
+            ingInfoColor:"disabled"
+        }
         render(props){
+            let Infomation_gubun = (gubun) =>{
+                if(gubun === "Info"){
+                    this.setState({Infomation_gubun:true, infoColor:"active", ingInfoColor:"disabled"})
+                }else{
+                    this.setState({Infomation_gubun:false, infoColor:"disabled", ingInfoColor:"active"})
+                }
+            }
             return (
                 <div className = "infomation">
                     <div className="infomation_title">
                         <ul>
-                            <li className="infomation_title_active">공지사항</li>
-                            <li className="infomation_title_disabled">진행 강좌 공지</li>
+                            <li className={this.state.infoColor} onClick={() => Infomation_gubun("Info")}>공지사항</li>
+                            <li className={this.state.ingInfoColor} onClick={() =>Infomation_gubun("ingInfo")}>진행 강좌 공지</li>
                             <li className="">더보기</li>
                         </ul>
                     </div>
-                    <div class="infomation_list">
-                        <ul>
-                        {this.props.Information.map((data,index) =>( 
-                            <li key ={index}><a href="#">{data.title} <span>{data.date}</span></a></li>
-                        ))}
-                        </ul>
-                    </div>
+                    {this.state.Infomation_gubun
+                        ?<InformationList Infomation={this.props.Infomation.Info}/>
+                        :<InformationList Infomation={this.props.Infomation.ingInfo}/>
+                    }
+                </div>
+            )
+        }
+    }
+    class InformationList extends React.Component{
+        render(props){
+            return (
+                <div class="infomation_list">
+                    <ul>
+                    {this.props.Infomation.map((data,index) =>( 
+                        <li key ={index}><p>{data.subject}</p><a href="#">{data.title} <span>{data.date}</span></a></li>
+                    ))}
+                    </ul>
                 </div>
             )
         }
     }
 
     class RightMenu extends React.Component{
+        state = {
+            display:"block"
+        }
         render(props){
-            console.log(this.props.importantInfo, this.props.intended)
+            console.log(this.props.right)
+            let rightHide = () => {
+                if (this.state.display === "block"){
+                    this.setState({
+                        display:"none"
+                    })
+                }else{
+                    this.setState({
+                        display:"block"
+                    })
+                }
+                
+            }
             return(
                 <div>
-                    <div className="important_info">
-                        <div className="important_info_title">
-                            <button><img src={"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/core/1591173085/t/switch_minus"} alt="bar"/></button>
-                            <h4>중요공지</h4>
+                    {this.props.right.map((data, index) =>(
+                    <div key={index} className="right_div">
+                        <div className="right_title">
+                            <button onClick={rightHide}><img src={data.img} alt="bar"/></button>
+                            <h4>{data.title}</h4>
                         </div>
-                        <div className="important_info_item">
-                            <ul>
-                                {this.props.importantInfo.map((data, index) =>(
+                        <div className="right_item">
+                            <ul className={this.state.display}>
+                                {data.list.map((data, index) =>(
                                     <li key ={index}><img src={data.img} alt=""/> 
-                                        <div className="important_info_item_title">
-                                            <h5>{data.title.slice(0,15)}... </h5>
+                                        <div className="right_info_item_title">
+                                            <h5>{data.title.slice(0,17)} </h5>
                                             <p>{data.date} </p>
                                         </div>
                                     </li>
@@ -98,37 +139,61 @@ import "./content.css";
                             </ul>
                         </div>
                     </div>
-                    <div className="intended">
-                        <div className="intended_info_title">
-                            <button><img src={"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/core/1591173085/t/switch_minus"} alt="bar"/></button>
-                            <h4>예정된 할일</h4>
-                        </div>
-                        <div className="intended_info_item">
-                            <ul>
-                                {this.props.intended.map((data, index) =>(
-                                    <li key ={index}><img src={data.img} alt=""/> 
-                                        <div className="intended_info_item_title">
-                                            <h5>{data.title} </h5>
-                                            <p>{data.date} </p>
-                                        </div>
-                                    </li>
-                                ))}
-                                <li className="etc">17 일정 더 보기</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="allIntended">
-                        <div className="allIntended_info_title">
-                                <button><img src={"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/core/1591173085/t/switch_minus"} alt="bar"/></button>
-                                <h4>전체 할일</h4>
-                            </div>
-                            <div className="allIntended_info_item">
-                               <p>신규 알림 내용이 없습니다.</p>
-                               <button>모두 보기</button>
-                            </div>
-                    </div>
+                    ))}
+                    
                 </div>
             )
         }
     }
+
+    class RightItem extends React.Component{
+        render(props){
+            console.log(this.props)
+            return(
+                <div className="right_item">
+                    <ul className="none">
+                        {this.props.list.map((data, index) =>(
+                            <li key ={index}><img src={data.img} alt=""/> 
+                                <div className="right_info_item_title">
+                                    <h5>{data.title} </h5>
+                                    <p>{data.date} </p>
+                                </div>
+                            </li>
+                        ))}
+                        <li className="etc">더보기</li>
+                    </ul>
+                </div>
+            )
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
 export default Content; 
+// <div className="intended">
+//                         <div className="intended_info_title">
+//                             <button><img src={"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/core/1591173085/t/switch_minus"} alt="bar"/></button>
+//                             <h4>예정된 할일</h4>
+//                         </div>
+//                         <div className="intended_info_item">
+                           
+//                         </div>
+//                     </div>
+//                     <div className="allIntended">
+//                         <div className="allIntended_info_title">
+//                                 <button><img src={"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/core/1591173085/t/switch_minus"} alt="bar"/></button>
+//                                 <h4>전체 할일</h4>
+//                             </div>
+//                             <div className="allIntended_info_item">
+//                                <p>신규 알림 내용이 없습니다.</p>
+//                                <button>모두 보기</button>
+//                             </div>
+//                     </div>

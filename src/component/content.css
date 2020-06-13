@@ -1,6 +1,12 @@
 h5{
     margin-bottom: 0px;
 }
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
 .title_color{
     color:#0370a6;
 }
@@ -20,6 +26,8 @@ h5{
 .main_wrap{
     float:left;
     width:100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .subject_title h3{
     display: inline-block;
@@ -119,10 +127,10 @@ h5{
     border:1px solid #e3e3e3;
     background-color: white;
 }
-.infomation_title_active{
+.active{
     color:#0370a6;
 }
-.infomation_title_disabled{
+.disabled{
     color:#b2b2b2;
 }
 .infomation_list li{
@@ -130,7 +138,10 @@ h5{
     list-style: disc;
     color: red;
     margin: 5px 0px 5px 40px;
-    padding-left: 1px;
+    padding: 10px;
+}
+.infomation_list li p{
+    color:#999
 }
 .infomation_list li a{
     display: inline-block;
@@ -148,40 +159,31 @@ h5{
     background-color: white;
     border: 1px solid #e3e3e3;
 }
-.important_info_title, .intended_info_title, .allIntended_title{
+.right_div:not(:nth-child(1)){
+    margin-top: 40px;
 }
-.important_info_title h4, .intended_info_title h4, .allIntended_info_title h4{
+.right_title h4{
     margin:0px;
     color:#0370a6;
 }
-.important_info_title button, .intended_info_title button, .allIntended_info_title button{
+.right_title button{
     float:right;
     background: none;
     border: none;
 }
-.important_info_item_title >h5 , .intended_info_item_title >h5{
-    font-weight: 400;
+.right_info_item_title >h5{
+    font-weight: 300;
 }
-.important_info_item > ul >li >img , .intended_info_item > ul >li >img{
+.right_info_item_title >p{
+    font-size: 12px;
+    font-weight: 300;
+    margin-top:5px;
+}
+.right_item > ul >li >img{
     float:left;
     margin-right:15px;
 }
-.allIntended_info_item p{
-    margin: 30px;
-    font-size: 14px;
-}
-.allIntended_info_item button{
-    background-color: white;
-    border: 1px solid #e3e3e3;
-    margin: 5px 0px;
-}
-.intended{
-    border-top:1px solid #e3e3e3;
-    margin:25px 0px;
-}
-.intended_info_title h4{
-    margin-top:15px;
-}
+
 .etc{
     background-color: rgb(247,249,250);
     border: 1px solid #e3e3e3;
