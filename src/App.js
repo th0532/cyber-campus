@@ -5,7 +5,6 @@ import Top from './component/top';
 import Sidebar from './component/sidebar';
 import Content from './component/content';
 import Footer from './component/footer'
-import Study from './study'
 import arrayData from "./data.json";
 
 class App extends React.Component {
@@ -61,15 +60,14 @@ state = {
   render(){
     return (
       <div className="App">
-      <Study></Study>
-            {/*<Top/>
+            <Top/>
             <div className="container">
               <Sidebar/>
               <Content
                 MainList = {this.state.MainList} Infomation ={this.state.Infomation} right={this.state.right}
               />
             </div>
-            <Footer/>*/}
+            <Footer/>
       </div>
     );
   }
