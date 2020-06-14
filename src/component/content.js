@@ -18,15 +18,13 @@ import "./content.css";
                                     </div>
                                         <MainList MainList = {this.props.MainList}/>
                                 </div>
-                                    <Information Infomation={this.props.Infomation}/> :
-                                
+                                    <Information Infomation={this.props.Infomation}/> 
                             </div>
                         </div>
                     </div>
                 </div>
             )
         }
-        
     }
     class MainList extends React.Component{
         render(props){
@@ -167,33 +165,4 @@ import "./content.css";
         }
     }
 
-
-
-
-
-
-
-
-
-
-
 export default Content; 
-// <div className="intended">
-//                         <div className="intended_info_title">
-//                             <button><img src={"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/core/1591173085/t/switch_minus"} alt="bar"/></button>
-//                             <h4>예정된 할일</h4>
-//                         </div>
-//                         <div className="intended_info_item">
-                           
-//                         </div>
-//                     </div>
-//                     <div className="allIntended">
-//                         <div className="allIntended_info_title">
-//                                 <button><img src={"http://cyber.gachon.ac.kr/theme/image.php/coursemosv2/core/1591173085/t/switch_minus"} alt="bar"/></button>
-//                                 <h4>전체 할일</h4>
-//                             </div>
-//                             <div className="allIntended_info_item">
-//                                <p>신규 알림 내용이 없습니다.</p>
-//                                <button>모두 보기</button>
-//                             </div>
-//                     </div>

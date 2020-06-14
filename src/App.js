@@ -5,6 +5,7 @@ import Top from './component/top';
 import Sidebar from './component/sidebar';
 import Content from './component/content';
 import Footer from './component/footer'
+import Study from './study'
 import arrayData from "./data.json";
 
 class App extends React.Component {
@@ -49,11 +50,8 @@ state = {
   getMainList = async() =>{
     // axios => https 문제 => local data 사용
     // const data = await axios.get("http://recruit.dothome.co.kr/data.json");
-    // this.setState({MainList:data.data.MainList, Info:data.data.Info, ingInfo:data.data.ingInfo, importantInfo:data.data.importantInfo, intended:data.data.intended})
-    const data = await axios.get("http://recruit.dothome.co.kr/data.json");
-    this.setState({MainList:data.data.MainList, Infomation:data.data.Infomation, right:data.data.right})
-    // this.setState({MainList:arrayData.MainList, Infomation:arrayData.Infomation, importantInfo:arrayData.importantInfo, intended:arrayData.intended})
-    
+    // this.setState({MainList:data.data.MainList, Infomation:data.data.Infomation, right:data.data.right})
+    this.setState({MainList:arrayData.MainList, Infomation:arrayData.Infomation, right:arrayData.right})
   }
   
   componentDidMount(){
@@ -63,15 +61,15 @@ state = {
   render(){
     return (
       <div className="App">
-          <Top/>
-          <div className="container">
-            <Sidebar/>
-            <Content
-              MainList = {this.state.MainList} Infomation ={this.state.Infomation} right={this.state.right}
-            />
-          </div>
-          <Footer/>
-
+      <Study></Study>
+            {/*<Top/>
+            <div className="container">
+              <Sidebar/>
+              <Content
+                MainList = {this.state.MainList} Infomation ={this.state.Infomation} right={this.state.right}
+              />
+            </div>
+            <Footer/>*/}
       </div>
     );
   }
