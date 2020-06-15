@@ -71,7 +71,7 @@ const Sidebar = () =>{
                 menuKey:"useInfo"
             }];
 
-    const [mypageActive, setMypage] = useState(true);
+    const [mypageActive, setMypage] = useState(false);
     const [curriculumActive, setcurriculum] = useState(false);
     const [gachonMoocActive, setGachonMooc] = useState(false);
     const [goodCourseActive, setGoodCourse] = useState(false);
@@ -131,11 +131,6 @@ const Sidebar = () =>{
             }
         }
     }
-
-    useEffect(() => {
-        document.querySelector(".mypage ul").className = "wrap_item block";
-    });
-
 
         return (
             <div className = "sidebar">
