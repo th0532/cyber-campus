@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "770e24153abab6c884b2fb5e40f33a35",
+    "revision": "fa97ac526f04c1b236a4503d744b6ab6",
     "url": "/cyber-campus/index.html"
   },
   {
-    "revision": "3eb66e1f592f70db5e6f",
-    "url": "/cyber-campus/static/css/main.3c92b86c.chunk.css"
+    "revision": "5337225b784b12df3b23",
+    "url": "/cyber-campus/static/css/main.c503ec8b.chunk.css"
   },
   {
     "revision": "78217bfbe7fa53949aea",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cyber-campus/static/js/2.8a2ca699.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3eb66e1f592f70db5e6f",
-    "url": "/cyber-campus/static/js/main.46471ef4.chunk.js"
+    "revision": "5337225b784b12df3b23",
+    "url": "/cyber-campus/static/js/main.ca2c158b.chunk.js"
   },
   {
     "revision": "38b0283e032627b14d34",

@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/cyber-campus/static/css/main.3c92b86c.chunk.css",
-    "main.js": "/cyber-campus/static/js/main.46471ef4.chunk.js",
-    "main.js.map": "/cyber-campus/static/js/main.46471ef4.chunk.js.map",
+    "main.css": "/cyber-campus/static/css/main.c503ec8b.chunk.css",
+    "main.js": "/cyber-campus/static/js/main.ca2c158b.chunk.js",
+    "main.js.map": "/cyber-campus/static/js/main.ca2c158b.chunk.js.map",
     "runtime-main.js": "/cyber-campus/static/js/runtime-main.634ee662.js",
     "runtime-main.js.map": "/cyber-campus/static/js/runtime-main.634ee662.js.map",
     "static/js/2.8a2ca699.chunk.js": "/cyber-campus/static/js/2.8a2ca699.chunk.js",
     "static/js/2.8a2ca699.chunk.js.map": "/cyber-campus/static/js/2.8a2ca699.chunk.js.map",
     "index.html": "/cyber-campus/index.html",
-    "precache-manifest.4428e8bf4bcc41906d1146b4ae631ccd.js": "/cyber-campus/precache-manifest.4428e8bf4bcc41906d1146b4ae631ccd.js",
+    "precache-manifest.23d5fcc40c27bff62d3295ce4fe8e042.js": "/cyber-campus/precache-manifest.23d5fcc40c27bff62d3295ce4fe8e042.js",
     "service-worker.js": "/cyber-campus/service-worker.js",
-    "static/css/main.3c92b86c.chunk.css.map": "/cyber-campus/static/css/main.3c92b86c.chunk.css.map",
+    "static/css/main.c503ec8b.chunk.css.map": "/cyber-campus/static/css/main.c503ec8b.chunk.css.map",
     "static/js/2.8a2ca699.chunk.js.LICENSE.txt": "/cyber-campus/static/js/2.8a2ca699.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.634ee662.js",
     "static/js/2.8a2ca699.chunk.js",
-    "static/css/main.3c92b86c.chunk.css",
-    "static/js/main.46471ef4.chunk.js"
+    "static/css/main.c503ec8b.chunk.css",
+    "static/js/main.ca2c158b.chunk.js"
   ]
 }
