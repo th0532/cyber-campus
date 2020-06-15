@@ -14,6 +14,9 @@
     bottom:0px;
 }
 
+.wrap li a{
+    color:white;
+}
 .wrap li div{
     padding:10px 25px;
 }
@@ -46,4 +49,8 @@
     display:inline-block;
     font-size:12px;
     color:#dddddd;
+}
+.wrap_item li a:hover{
+color:white;
+zoom:1.1;
 }
